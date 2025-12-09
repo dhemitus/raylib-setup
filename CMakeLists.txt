@@ -4,14 +4,6 @@ project(RaylibTemplate)
 
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-add_subdirectory(vendor/raylib)
 add_subdirectory(src)
-
-target_include_directories(${PROJECT_NAME} PRIVATE vendor/raylib/src)
-
-target_include_directories(${PROJECT_NAME} PRIVATE vendor/raygui/src)
-
-target_link_libraries(${PROJECT_NAME} raylib)
-
-target_compile_definitions(${PROJECT_NAME}
-                           PUBLIC ASSET_PATH="${CMAKE_CURRENT_SOURCE_DIR}/res/")
+add_subdirectory(vendor)
+target_link_libraries(${PROJECT_NAME} vendor)
