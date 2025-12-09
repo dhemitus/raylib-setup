@@ -45,8 +45,8 @@ int main(void) {
       bunnies[i].position.x += bunnies[i].speed.x;
       bunnies[i].position.y += bunnies[i].speed.y;
 
-      float bunnyCX = bunnies[i].position.x + texBunny.width / 2;
-      float bunnyCY = bunnies[i].position.y + texBunny.height / 2;
+      float bunnyCX = bunnies[i].position.x + (float)(texBunny.width / 2.0);
+      float bunnyCY = bunnies[i].position.y + (float)(texBunny.height / 2.0);
 
       if (bunnyCX > GetScreenWidth() || bunnyCX < 0)
         bunnies[i].speed.x *= -1;
