@@ -5,9 +5,7 @@ project(RaylibTemplate)
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_subdirectory(vendor/raylib)
-
-file(GLOB_RECURSE SOURCES "src/*.c")
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_subdirectory(src)
 
 target_include_directories(${PROJECT_NAME} PRIVATE vendor/raylib/src)
 
